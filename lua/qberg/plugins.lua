@@ -64,6 +64,12 @@ return packer.startup(function(use)
 	use { 'rafi/awesome-vim-colorschemes' } 
 	-- devicons
 	use { 'kyazdani42/nvim-web-devicons' }
+	-- tree-sitter
+	use { 
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	}
+	use { "p00f/nvim-ts-rainbow" }
 
 	-- completion
 	use { "hrsh7th/nvim-cmp" } -- The completion plugin
