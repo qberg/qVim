@@ -2,6 +2,7 @@
 ---- User defined keymappings ----
 ----------------------------------
 
+
 --Remap space as leader key
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }

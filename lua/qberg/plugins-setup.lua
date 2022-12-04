@@ -81,21 +81,26 @@ return packer.startup(function(use)
 	use { "saadparwaiz1/cmp_luasnip" }
 
 	-- lsp
-	-- use { "williamboman/mason.nvim" }
-	-- use  { "williamboman/mason-lspconfig.nvim" }
-	-- use { "neovim/nvim-lspconfig" }
-	-- use { "hrsh7th/cmp-nvim-lsp" }
-	-- -- formatting and linting
-	-- use { "jose-elias-alvarez/null-ls.nvim" }
-	-- use { "jayp0521/mason-null-ls.nvim" }
+	use { "williamboman/mason.nvim" }
+	use  { "williamboman/mason-lspconfig.nvim" }
+	use { "neovim/nvim-lspconfig" }
+	use { "hrsh7th/cmp-nvim-lsp" }
+	-- formatting and linting
+	use { "jose-elias-alvarez/null-ls.nvim" }
+	use { "jayp0521/mason-null-ls.nvim" }
+	use { "lukas-reineke/indent-blankline.nvim" }
 
-	-- treesitter
-	-- use ({
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	run = function()
-	-- 		local ts_update = require("nvim-treesitter.install").update({ with_sync = true})
-	-- 	ts_update()
-	-- })
+	-- treesitter configuration
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
+	-- auto closing
+	use { "windwp/nvim-autopairs" }
+	use { "windwp/nvim-ts-autotag" }
 
 	-- Markdown preview
 	use { 
