@@ -49,13 +49,16 @@ return packer.startup(function(use)
 
 	-- telescope
 	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = "make"
+	}
+	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use {
-		'nvim-telescope/telescope-fzf-native.nvim',
-		run = make
-	}
+
+	-- file-explorer
+	use('nvim-tree/nvim-tree.lua')
 
 	-- Colorschemes
 	use { 'folke/tokyonight.nvim'}
@@ -65,13 +68,12 @@ return packer.startup(function(use)
 	-- devicons
 	use { 'kyazdani42/nvim-web-devicons' }
 	-- statusbar
-	
+	use { "nvim-lualine/lualine.nvim" }
 
 	-- completion
 	use { "hrsh7th/nvim-cmp" } -- The completion plugin
 	use { "hrsh7th/cmp-buffer" } -- buffer completions
 	use { "hrsh7th/cmp-path" } -- path completions
-	use { "hrsh7th/cmp-nvim-lsp" }
 	use { "hrsh7th/cmp-nvim-lua" }
 
 	-- snippets
@@ -79,9 +81,21 @@ return packer.startup(function(use)
 	use { "saadparwaiz1/cmp_luasnip" }
 
 	-- lsp
-	use { "williamboman/nvim-lsp-installer" }
-	use { "neovim/nvim-lspconfig" }
+	-- use { "williamboman/mason.nvim" }
+	-- use  { "williamboman/mason-lspconfig.nvim" }
+	-- use { "neovim/nvim-lspconfig" }
+	-- use { "hrsh7th/cmp-nvim-lsp" }
+	-- -- formatting and linting
+	-- use { "jose-elias-alvarez/null-ls.nvim" }
+	-- use { "jayp0521/mason-null-ls.nvim" }
 
+	-- treesitter
+	-- use ({
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	run = function()
+	-- 		local ts_update = require("nvim-treesitter.install").update({ with_sync = true})
+	-- 	ts_update()
+	-- })
 
 	-- Markdown preview
 	use { 

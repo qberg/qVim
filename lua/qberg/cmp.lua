@@ -8,7 +8,6 @@ if not snip_status_ok then
   return
 end
 
---   פּ ﯟ   some other good icons
 local icons = {
 	Text = "",
 	Method = "m",
@@ -130,6 +129,4 @@ cmp.setup.cmdline(':', {
 		{ name = 'path' }
 	}, {
 		{ name = 'cmdline' }
-	})
-})
-
+	})	
