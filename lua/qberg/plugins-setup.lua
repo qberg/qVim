@@ -50,10 +50,10 @@ return packer.startup(function(use)
 	-- telescope
 	use {
 		'nvim-telescope/telescope-fzf-native.nvim',
-		run = "make"
+		run = "make",
 	}
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim', tag = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
