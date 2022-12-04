@@ -24,8 +24,8 @@ vim.cmd([[
 ]])
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
+local setup, packer = pcall(require, "packer")
+if not setup then
 	return
 end
 
@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	}
 
 	-- file-explorer
-	use('nvim-tree/nvim-tree.lua')
+	use { 'nvim-tree/nvim-tree.lua' }
 
 	-- Colorschemes
 	use { 'folke/tokyonight.nvim'}
