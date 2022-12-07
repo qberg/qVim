@@ -48,14 +48,32 @@ return packer.startup(function(use)
 	}
 
 	-- telescope
-	use {
-		'nvim-telescope/telescope-fzf-native.nvim',
-		run = "make",
-	}
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+	-- use {
+	-- 	'nvim-telescope/telescope-fzf-native.nvim',
+	-- 	run = "make",
+	-- }
+	-- use {
+	-- 	'nvim-telescope/telescope.nvim', tag = '0.1.x',
+	-- 	requires = { {'nvim-lua/plenary.nvim'} }
+	-- }
+	-- file navigation
+	use({
+		'nvim-telescope/telescope.nvim',
+		requires = {
+			'nvim-lua/popup.nvim',
+			'nvim-lua/plenary.nvim',
+			{
+				'nvim-telescope/telescope-fzf-native.nvim',
+				run = 'make',
+			},
+		},
+		-- config = function()
+		-- 	require('qberg.plugins.telescope.mappings').init()
+		-- 	require('qberg.plugins.telescope')
+		-- end,
+		-- event = 'BufWinEnter',
+		-- disable = vim.tbl_contains(user_config.disable_builtin_plugins, 'telescope'),
+	})
 
 	-- file-explorer
 	use { 'nvim-tree/nvim-tree.lua' }

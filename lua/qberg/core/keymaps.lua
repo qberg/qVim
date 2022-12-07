@@ -53,3 +53,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -----------------------------------------------
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- telescope
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
+keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory

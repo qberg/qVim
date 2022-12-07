@@ -5,7 +5,6 @@ end
 
 local actions = require "telescope.actions"
 local builtin = require "telescope.builtin"
-local M = {} 
 
 telescope.setup {
   defaults = {
@@ -97,3 +96,4 @@ telescope.setup {
   },
 }
 
+telescope.load_extension("fzf")
