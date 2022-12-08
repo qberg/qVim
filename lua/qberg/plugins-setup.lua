@@ -47,16 +47,6 @@ return packer.startup(function(use)
 		"nvim-lua/popup.nvim",
 	}
 
-	-- telescope
-	-- use {
-	-- 	'nvim-telescope/telescope-fzf-native.nvim',
-	-- 	run = "make",
-	-- }
-	-- use {
-	-- 	'nvim-telescope/telescope.nvim', tag = '0.1.x',
-	-- 	requires = { {'nvim-lua/plenary.nvim'} }
-	-- }
-	-- file navigation
 	use({
 		'nvim-telescope/telescope.nvim',
 		requires = {
@@ -77,7 +67,8 @@ return packer.startup(function(use)
 
 	-- file-explorer
 	use { 'nvim-tree/nvim-tree.lua' }
-
+	-- terminal emulator
+	use { "akinsho/toggleterm.nvim" }
 	-- Colorschemes
 	use { 'folke/tokyonight.nvim'}
 	use { 'rktjmp/lush.nvim'}
