@@ -47,6 +47,9 @@ return packer.startup(function(use)
 		"nvim-lua/popup.nvim",
 	}
 
+	-- for faster booting
+	use { 'lewis6991/impatient.nvim' }
+
 	use({
 		'nvim-telescope/telescope.nvim',
 		requires = {
@@ -78,7 +81,7 @@ return packer.startup(function(use)
 	use { 'kyazdani42/nvim-web-devicons' }
 	-- statusbar
 	use { "nvim-lualine/lualine.nvim" }
-
+	
 	-- completion
 	use { "hrsh7th/nvim-cmp" } -- The completion plugin
 	use { "hrsh7th/cmp-buffer" } -- buffer completions
@@ -94,6 +97,10 @@ return packer.startup(function(use)
 	use  { "williamboman/mason-lspconfig.nvim" }
 	use { "neovim/nvim-lspconfig" }
 	use { "hrsh7th/cmp-nvim-lsp" }
+	use({ 
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+	})
 	-- formatting and linting
 	use { "jose-elias-alvarez/null-ls.nvim" }
 	use { "jayp0521/mason-null-ls.nvim" }
@@ -107,6 +114,8 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
+	-- highlighting
+	use { 'RRethy/vim-illuminate' }
 	-- auto closing
 	use { "windwp/nvim-autopairs" }
 	use { "windwp/nvim-ts-autotag" }

@@ -26,8 +26,6 @@ local servers = {
 	"tailwindcss",
 	"tsserver",
 	"pyright",
-	"bashls",
-	"jsonls",
 	"emmet_ls",
 }
 

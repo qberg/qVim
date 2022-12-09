@@ -49,30 +49,26 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- Change the Diagnostic symbols in the sign column (gutter)
+-- (not in youtube nvim video)
 local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-------------------------------------
--- configure rust_analyzer
+-- configure rust analyzer
 lspconfig["rust_analyzer"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
------------------------------------
 
------------------------------------
---configure pyright
------------------------------------
+-- configure pyright
 lspconfig["pyright"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
------------------------------------
 
-
+-- configure html server
 lspconfig["html"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
@@ -125,4 +121,3 @@ lspconfig["sumneko_lua"].setup({
     },
   },
 })
---------------------------------------
