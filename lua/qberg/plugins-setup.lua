@@ -101,6 +101,7 @@ return packer.startup(function(use)
 		"glepnir/lspsaga.nvim",
 		branch = "main",
 	})
+	use { 'simrat39/rust-tools.nvim' }
 	-- formatting and linting
 	use { "jose-elias-alvarez/null-ls.nvim" }
 	use { "jayp0521/mason-null-ls.nvim" }
