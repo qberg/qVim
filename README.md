@@ -3,26 +3,26 @@
 ```
 ├── init.lua  
 ├── lua
-│   ├── qberg                   heart of the configuration
-        ├── core 
-│   │       ├── colorscheme.lua
-│   │       ├── keymaps.lua             keymaps custom defined 
-│   │       └── options.lua             setting vim options
-│   └── plugins                    plugins module usage example
-│       ├── completion
-│       │   ├── config.lua
-│       │   └── plugins.lua
-│       ├── lang
-│       │   ├── config.lua
-│       │   └── plugins.lua
-│       ├── tools
-│       │   ├── config.lua
-│       │   └── plugins.lua
-│       └── ui
-│           ├── config.lua
-│           ├── eviline.lua
-│           └── plugins.lua
-
+│   ├── qberg                           user named module to avoid clashes        
+    │  ├── core                 
+│   │  │   ├── colorscheme.lua
+│   │  │   ├── keymaps.lua              keymaps custom defined 
+│   │  │   └── options.lua              setting vim options
+│   │  └── plugins                      configs of plugins 
+│   │       ├── telescope
+│   │       │   ├── init.lua
+│   │       │   └── plugins.lua
+│   │       ├── toggleterm
+│   │       │   ├── init.lua
+│   │       │   └── plugins.lua
+│   │       ├── autopairs.lua
+│   │       ├── impatient.lua
+│   │       ├── lualine.lua
+│   │       ├── nvim-cmp.lua
+│   │       ├── nvim-tree.lua
+│   │       ├── treesitter.lua
+│   │       ├── vim-illuminate.lua
+│   │       └── whichkey.lua
 ```
 
 ## Upgrade to latest release
