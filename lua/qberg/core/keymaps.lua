@@ -35,8 +35,6 @@ keymap("n", "<leader>tx", ":tabclose<CR>", opts)
 keymap("n", "<leader>tn", ":tabn<CR>", opts)
 keymap("n", "<leader>tp", ":tabp<CR>", opts)
 
--- source current file
-keymap("n", "<leader>r", ":source %<CR>", opts)
 -----------------------------------------------
 -- Visual mode
 -----------------------------------------------
@@ -63,3 +61,9 @@ keymap("n", "<leader>en", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", op
 keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
 keymap("n", "<leader>fh", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts) -- finds string in the current file
+
+-- zenmode
+keymap("n", "<leader>zz", function()
+    require("zen-mode").toggle()
+    vim.wo.wrap = false
+end, opts)

@@ -101,6 +101,15 @@ return packer.startup(function(use)
 		"glepnir/lspsaga.nvim",
 		branch = "main",
 	})
+	use {
+		'MrcJkb/haskell-tools.nvim',
+		requires = {
+			'neovim/nvim-lspconfig',
+			'nvim-lua/plenary.nvim',
+			'nvim-telescope/telescope.nvim', -- optional
+		},
+		-- tag = 'x.y.z' -- [^1]
+	}
 	use { 'simrat39/rust-tools.nvim' }
 	-- formatting and linting
 	use { "jose-elias-alvarez/null-ls.nvim" }
@@ -121,12 +130,19 @@ return packer.startup(function(use)
 	use { "windwp/nvim-autopairs" }
 	use { "windwp/nvim-ts-autotag" }
 
+	-- Zen mode
+	use("folke/zen-mode.nvim")
+
 	-- Markdown preview
 	use { 
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install", 
 		cmd = "MarkdownPreview",
 	}
+
+	-- uselesss plugins time
+	use 'eandrju/cellular-automaton.nvim' 
+	
 
 	
     ----------------------------------------------------------------------

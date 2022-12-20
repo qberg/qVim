@@ -18,7 +18,6 @@ local options = {
 	relativenumber  = true, -- relative numbering of lines for easier navigation
 	shiftwidth		= 4, -- number of spaces inserted while indenting
 	showmode 		= false, -- know it in your cursor
-	signcolumn 		= "yes", -- shows the sign column to avoid shifting of text each time
 	smartcase 		= true, -- smart case
 	splitbelow		= true, -- force all horizontal splits to go below current window
 	splitright		= true, -- force all vertical splits to go to the right of the current window
