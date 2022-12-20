@@ -42,6 +42,7 @@ keymap("n", "<leader>tp", ":tabp<CR>", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+keymap("x", "<leader>p", "\"_dP", opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
@@ -66,4 +67,8 @@ keymap("n", "<leader>fh", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts) 
 keymap("n", "<leader>zz", function()
     require("zen-mode").toggle()
     vim.wo.wrap = false
-end, opts)
+	end, 
+opts)
+
+-- fugitive
+keymap("n", "<leader>gs", vim.cmd.Git, opts)

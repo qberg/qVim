@@ -82,6 +82,9 @@ return packer.startup(function(use)
 	-- statusbar
 	use { "nvim-lualine/lualine.nvim" }
 	
+    -- git made awesome
+	use('tpope/vim-fugitive')
+	
 	-- completion
 	use { "hrsh7th/nvim-cmp" } -- The completion plugin
 	use { "hrsh7th/cmp-buffer" } -- buffer completions
