@@ -61,7 +61,7 @@ keymap("n", "<leader>en", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", op
 
 keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
-keymap("n", "<leader>fh", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts) -- finds string in the current file
+keymap("n", "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts) -- finds string in the current file
 
 -- zenmode
 keymap("n", "<leader>zz", function()

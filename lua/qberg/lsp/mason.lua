@@ -1,11 +1,20 @@
 local servers = {
+	"bashls",
+	"cssls",
+	"cssmodules_ls",
 	"emmet_ls",
 	"html",
 	"hls",
 	"jsonls",
+	"jdtls",
 	"pyright",
 	"rust_analyzer",
 	"sumneko_lua",
+	"texlab",
+	"tflint",
+	"tsserver",
+	"tailwindcss",
+	"clangd",
 }
 
 local settings = {

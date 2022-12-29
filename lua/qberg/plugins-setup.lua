@@ -117,6 +117,7 @@ return packer.startup(function(use)
 	-- formatting and linting
 	use { "jose-elias-alvarez/null-ls.nvim" }
 	use { "jayp0521/mason-null-ls.nvim" }
+	use{ 'MunifTanjim/prettier.nvim'} 
 	use { "lukas-reineke/indent-blankline.nvim" }
 
 	-- treesitter configuration
@@ -136,7 +137,10 @@ return packer.startup(function(use)
 	-- Zen mode
 	use("folke/zen-mode.nvim")
 
-	-- Markdown preview
+	-- Latex
+	use { 'lervag/vimtex' } 
+	-- Markdown
+	use { 'lukas-reineke/headlines.nvim' }
 	use { 
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install", 
@@ -144,9 +148,7 @@ return packer.startup(function(use)
 	}
 
 	-- uselesss plugins time
-	use 'eandrju/cellular-automaton.nvim' 
-	
-
+	--use 'eandrju/cellular-automaton.nvim' 
 	
     ----------------------------------------------------------------------
     ----------------------------------------------------------------------
